@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
-  { label: 'Fitur', href: '#fitur' },
-  { label: 'Cara Kerja', href: '#cara-kerja' },
-  { label: 'Tentang', href: '#tentang' },
-  { label: 'Download', href: '#download' },
+  { label: "Fitur", href: "#fitur" },
+  { label: "Cara Kerja", href: "#cara-kerja" },
+  { label: "Tentang", href: "#tentang" },
+  { label: "Download", href: "#download" },
 ];
 
 export default function Navbar() {
@@ -17,8 +17,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -28,8 +28,8 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-xl shadow-sm border-b border-border/50'
-          : 'bg-transparent'
+          ? "bg-white/80 backdrop-blur-xl shadow-sm border-b border-border/50"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
@@ -37,7 +37,7 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.15)] group-hover:shadow-[0_4px_16px_rgba(0,0,0,0.2)] transition-shadow duration-300 ring-1 ring-black/[0.08]">
             <Image
-              src="/logo.svg"
+              src="/icon.svg"
               alt="Teman Ngaji"
               fill
               className="object-cover"
@@ -50,7 +50,7 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => (
+          {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -114,12 +114,12 @@ export default function Navbar() {
       {mobileOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
+          animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden border-t border-border/50 bg-white/95 backdrop-blur-xl"
         >
           <div className="px-6 py-4 flex flex-col gap-3">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
