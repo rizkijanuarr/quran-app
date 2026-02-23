@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   description:
     "Baca Al-Quran kapan saja, di mana saja. Lengkap dengan terjemahan Indonesia, transliterasi, audio murottal, penanda terakhir dibaca, dan bookmark. Gratis untuk Android.",
   icons: {
-    icon: "/icon.svg",
+    icon: "/app-icon.png",
+    apple: "/app-icon.png",
   },
   keywords: [
     "Al-Quran",
@@ -44,6 +45,21 @@ export const metadata: Metadata = {
       "Baca Al-Quran kapan saja, di mana saja. Lengkap dengan terjemahan, transliterasi, audio murottal, dan bookmark.",
     type: "website",
     locale: "id_ID",
+    images: [
+      {
+        url: "https://teman-ngaji.vercel.app/app-icon.png",
+        width: 500,
+        height: 500,
+        alt: "Teman Ngaji Kamu!",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Teman Ngaji Kamu! — Al-Quran Digital di Genggamanmu",
+    description:
+      "Baca Al-Quran kapan saja, di mana saja. Lengkap dengan terjemahan, transliterasi, audio murottal, dan bookmark.",
+    images: ["https://teman-ngaji.vercel.app/app-icon.png"],
   },
 };
 
